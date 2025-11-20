@@ -138,6 +138,73 @@ nav a:hover::after { width:100%; }
   box-sizing: border-box; 
 }
 
+/* === FADE OUT HEADER LA SCROLL === */
+header {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+header.hidden {
+  opacity: 0;
+  transform: translateY(-30px);
+  pointer-events: none;
+}
 
 
-@media (max-width: 768px) { header { flex-direction: column; padding:1rem; } nav ul { flex-wrap: wrap; justify-content:center; margin-top:10px; } .logo { height:70px; } .hero h2 { font-size:2rem; } .content { width:90%; padding:1.5rem; } }
+@media (max-width: 768px) { 
+  header { 
+    flex-direction: column; padding:1rem; 
+  } 
+  nav ul { 
+    flex-wrap: wrap; 
+    justify-content:center; 
+    margin-top:10px; 
+  } 
+  .logo { 
+    height:70px; 
+  } 
+  .hero h2 { 
+    font-size:2rem; 
+  } 
+  .content { 
+    width:90%; 
+    padding:1.5rem; 
+  }
+  .materii {
+    grid-template-columns: 1fr;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+/* Tablete */
+@media (max-width: 1024px) {
+  .logo {
+    height: 75px;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 568px) and (orientation: landscape) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0;
+  }
+}
+
+/* Mobile mic */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .logo {
+    height: 60px;
+  }
+  .content {
+    padding: 1rem;
+  }
+}
