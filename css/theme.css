@@ -1,0 +1,15 @@
+/* theme.css — overrides for light/dark mode and component color flips */
+@import url('variables.css');
+
+/* Light mode variables (override tokens if needed) */
+body.light { background: var(--light-bg); color: var(--light-text); }
+body.light .content { background: var(--light-card); }
+body.light .leadership .membru { background: var(--light-card); }
+
+/* Example: make stat-label dark in light mode */
+body.light .stat-label { color: #000; }
+
+/* Add any other light-mode adjustments here */
+body.light .content { 
+  background: var(--light-card); 
+}

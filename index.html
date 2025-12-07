@@ -8,11 +8,25 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- split CSS for easier maintenance -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/pages.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+     <div id="page-loader">
+       <div class="loader-content">
+        <img src="logo nexus(scris).png" alt="Nexus" class="loader-logo">
+       <div class="loader-bar"></div>
+    </div>
+   </div>
+    <div id="progress-bar"></div>
     <!-- COOKIE POPUP (mutat în body) -->
-    <div id="cookie-popup" class="cookie-popup">
+   <!-- <div id="cookie-popup" class="cookie-popup">
       <div class="cookie-content">
         <h3>🍪 Folosim cookie-uri</h3>
         <p>
@@ -25,7 +39,7 @@
         </div>
       </div>
     </div>
-
+  -->
     <header>
       <img src="logo nexus(scris).png" alt="Logo Nexus" class="logo" />
 
@@ -372,6 +386,10 @@
         <div class="membru">
           <strong>Dumitrescu Victor</strong><br />Coordonator (titular)
           <div class="hover-popup">
+            <img
+              src="POZE Membrii Nexus/Imagine WhatsApp 2025-10-28 la 21.14.29_48308ca7.jpg"
+              alt="Dumitrescu Victor"
+            />
             <h3>Dumitrescu Victor</h3>
             <h4>Coordonator (titular)</h4>
             <p>
@@ -385,14 +403,15 @@
           <strong>Marina Andrei Robert</strong><br />Președinte
           <div class="hover-popup">
             <img
-              src="POZE Membrii Nexus/Poza Mihnea.jpg"
+              src="POZE Membrii Nexus/Poza Marina.jpg"
               alt="Cristache Mihnea Andrei"
             />
             <h3>Marina Andrei Robert</h3>
             <h4>Președinte</h4>
             <p>
-              Conduce echipa și organizează activitățile clubului cu entuziasm
-              și responsabilitate.
+              "Ambiția este focul care arde limitele și mă împinge să fac orice îmi propun. 
+               Un singur dușman am - somnul, dar să fiu sincer, nu știu dacă îmi circulă sânge sau cafea roșie prin vene.
+               Ador să fac lumea din jurul meu să se simtă bine și vreu să împărtășesc secretele științei într-un mod amuzant și, de ce nu, mai nebunesc."
             </p>
           </div>
         </div>
@@ -513,6 +532,24 @@
           </div>
         </div>
 
+
+        <div class="membru">
+          <strong>Stroie Ana</strong><br />Mentor Biologie
+          <div class="hover-popup">
+            <img
+              src="POZE Membrii Nexus/Poza Ana Stroie.jpg"
+              alt="Stroie Ana"
+            />
+            <h3>Stroie Ana</h3>
+            <h4>Mentor Biologie</h4>
+            <p>
+              "Sunt pasionată de biologie de când mă știu 
+              și abia aștept să descoperim cât mai multe împreuna!!
+              Mă consider o persoană implicată și sunt sigură că vom colabora ușor!"
+            </p>
+          </div>
+         </div>
+
         <div class="membru">
           <strong>Pleșa Melek Maria</strong><br />Mentor Chimie
           <div class="hover-popup">
@@ -566,31 +603,39 @@
         </div>
       </div>
 
-      <!-- 🔹 MEMBRI -->
-      <h3>Membri</h3>
+
+      <!-- 🔹 MARKETING -->
+      <!-- 🔹 Marketing -->
+      <h3>Marketing</h3>
       <div class="team">
         <div class="membru">
-          <strong>Bîlga Maria Daria</strong><br />Marketing
+          <strong>Bîlga Maria Daria</strong><br />Graphic design
           <div class="hover-popup">
             <img
-              src="POZE Membrii Nexus/Poza Mihnea.jpg"
+              src="POZE Membrii Nexus/Poza Daria.jpg"
               alt="Bîlga Maria Daria"
             />
             <h3>Bîlga Maria Daria</h3>
-            <h4>Marketing</h4>
-            <p>Responsabilă cu promovarea și imaginea publică a clubului.</p>
+            <h4>Graphic Design</h4>
+            <p>
+              "Oficial parte din echipa de marketing la Nexus.  Ambiția, creativitatea și puțin haos controlat — rețeta mea preferată. 
+              În teorie, eu controlez designul. În practică, stilul meu preferă improvizația. 
+              Totul arată perfect...până deschid fișierul pe alt monitor. Uneori am idei bune.
+              Alteori doar schimb culoarea și stilul la un buton de 20 de ori.
+              Designul e ca părul meu: nu iese niciodată la fel de două ori."
+            </p>
           </div>
         </div>
 
         <div class="membru">
-          <strong>Cristache Mihnea Andrei</strong><br />Marketing & IT
+          <strong>Cristache Mihnea Andrei</strong><br />Administrare Site
           <div class="hover-popup">
             <img
               src="POZE Membrii Nexus/Poza Mihnea.jpg"
               alt="Cristache Mihnea Andrei"
             />
             <h3>Cristache Mihnea Andrei</h3>
-            <h4>Marketing & IT</h4>
+            <h4>Administrare Site</h4>
             <p>
               "Iubesc să fiu ordonat și ca totul să fie perfect; aceste două
               trăsături mă ajută să am armonie în tot ceea ce fac. Am o
@@ -603,14 +648,14 @@
         </div>
 
         <div class="membru">
-          <strong>Tocitu Sofia-Ioana</strong><br />Marketing
+          <strong>Tocitu Sofia-Ioana</strong><br />Social media
           <div class="hover-popup">
             <img
               src="POZE Membrii Nexus/Poza Sofia.jpg"
               alt="Tocitu Sofia-Ioana"
             />
             <h3>Tocitu Sofia-Ioana</h3>
-            <h4>Marketing</h4>
+            <h4>Social media</h4>
             <p>
               "Deoarece sunt pasionată de ştiințele exacte, am ales să fac parte
               din Clubul Nexus pentru a descoperi cât mai mult din domeniul
@@ -635,14 +680,14 @@
         </div>
 
         <div class="membru">
-          <strong>Oprescu Sergiu Petre</strong><br />Marketing
+          <strong>Oprescu Sergiu Petre</strong><br />Sponsors
           <div class="hover-popup">
             <img
               src="POZE Membrii Nexus/Poza Sergiu.jpg"
               alt="Oprescu Sergiu Petre"
             />
             <h3>Oprescu Sergiu Petre</h3>
-            <h4>Marketing</h4>
+            <h4>Sponsors</h4>
             <p>
               "Imi place să cunosc oameni noi și să descopăr perspective
               interesante. Sunt o persoană curioasă și interesată să învăț și să
@@ -652,7 +697,25 @@
         </div>
       </div>
     </section>
+      <section id="statistics" class="content reveal">
+        <h2>Realizările noastre</h2>
+          <div class="stats-container">
+          <div class="stat-box">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-label">Membri activi</div>
+        </div>
+          <div class="stat-box">
+           <div class="stat-number" data-target="50">50</div>
+           <div class="stat-label">Participanţi</div>
+        </div>
+          <div class="stat-box">
+           <div class="stat-number" data-target="7">0</div>
+           <div class="stat-label">Profesori coordonatori</div>
+        </div>
+    </div>
 
+
+    </section>
     <section id="contact" class="content reveal">
       <h2>Contact</h2>
       <p>Pentru întrebări, colaborări sau înscrieri, ne poți scrie la:</p>
@@ -675,7 +738,7 @@
           stroke-linejoin="round"
           class="feather feather-instagram"
         >
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <rect x="2" y="1" width="20" height="20" rx="5" ry="6"></rect>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
           <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
         </svg>
@@ -696,5 +759,12 @@
     <button id="scrollTopBtn" title="Înapoi sus">↑</button>
 
     <script src="script.js"></script>
+</a>
+    <!-- main app module (ES modules) -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
+ <script src="particles.js"></script>
+
   </body>
 </html>

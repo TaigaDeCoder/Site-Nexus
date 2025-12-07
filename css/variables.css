@@ -1,0 +1,19 @@
+/* variables.css — design tokens and color variables extracted from style.css */
+:root {
+  --primary: #c084fc;
+  --primary-dark: #9333ea;
+  --dark-bg: linear-gradient(135deg, #0b0e27, #1a1f3b, #2b005c);
+  --light-bg: linear-gradient(135deg, #e4e4ff, #fafafa);
+  --dark-card: rgba(255, 255, 255, 0.05);
+  --light-card: rgba(255, 255, 255, 0.8);
+  --dark-text: #fff;
+  --light-text: #1a1a1a;
+
+  /* spacing & radii */
+  --radius-lg: 14px;
+  --radius-md: 8px;
+  --gap-md: 1rem;
+
+  /* typography */
+  --font-sans: "Poppins", sans-serif;
+}

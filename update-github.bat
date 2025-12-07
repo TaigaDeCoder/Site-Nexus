@@ -1,5 +1,4 @@
 @echo off
-REM === Script pentru actualizarea automată a repository-ului GitHub ===
 cd /d "%~dp0"
 
 echo ============================================
@@ -7,19 +6,19 @@ echo     🚀 ACTUALIZARE SITE NEXUS PE GITHUB
 echo ============================================
 echo.
 
-REM === Adăugare toate modificările ===
 git add .
-
-REM === Creare commit cu data actuală ===
 setlocal enabledelayedexpansion
 for /f "tokens=1-3 delims=/ " %%a in ("%date%") do (
     set today=%%a-%%b-%%c
 )
-git commit -m "Actualizare automată - !today!"
+git commit -m "Actualizare automata - !today!"
 
-REM === Push către GitHub ===
+echo 🔄 Sincronizare cu GitHub...
+git pull origin main --rebase
+
+echo 🚀 Trimitere modificari...
 git push origin main
 
 echo.
-echo ✅ Modificările au fost urcate cu succes pe GitHub!
+echo ✅ Modificarile au fost urcate cu succes pe GitHub!
 pause

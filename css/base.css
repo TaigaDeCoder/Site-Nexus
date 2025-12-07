@@ -1,0 +1,85 @@
+/* base.css — global resets, typography, core background and animations */
+@import url('variables.css');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-image: linear-gradient(
+    40deg,
+    hsl(269deg 92% 41%) 0%,
+    hsl(259deg 90% 49%) 14%,
+    hsl(250deg 88% 57%) 29%,
+    hsl(246deg 78% 44%) 45%,
+    hsl(245deg 64% 21%) 63%,
+    hsl(250deg 56% 6%) 79%,
+    hsl(269deg 67% 10%) 92%,
+    hsl(288deg 76% 13%) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+  color: var(--dark-text);
+  transition: background 0.4s, color 0.4s;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Heading gradient text effect */
+h2, h3 {
+  background: linear-gradient(90deg, #c084fc, #8b5cf6, #c084fc);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShine 3s linear infinite;
+}
+
+@keyframes gradientShine { 
+    to { 
+      background-position: 200% center; 
+    } 
+}
+
+/* Reveal helper used site-wide */
+.reveal { 
+    opacity: 0;
+    transform: translateY(60px); 
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+.reveal.visible { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+html { 
+    scroll-behavior: smooth; 
+    scroll-padding-top: 100px; 
+}
+
+/* Responsive helpers (global) */
+@media (max-width: 1024px) {
+    .logo { height: 75px; } nav ul { gap: 1rem; } 
+}
+@media (max-width: 568px) and (orientation: landscape) { 
+    .hero { height: auto; min-height: 100vh; padding: 100px 0; } 
+}
+@media (max-width: 480px) { 
+    .hero h2 { font-size: 1.5rem; } 
+    .logo { height: 60px; } 
+    .content { padding: 1rem; } 
+}
+
+/* Utility helpers */
+.container { 
+    width: min(1200px, 94%); 
+    margin-inline: auto; 
+}
+
+.hidden { 
+    display: none !important; 
+}
